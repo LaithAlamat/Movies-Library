@@ -37,8 +37,8 @@ app.get("/favorite", favoritePageHandler);
 
 let pageNotFoundHandler = (req, res) => {
     res.send({
-        status: 500,
-        responseText: "Something went wrong",
+        status: 404,
+        responseText: "Page not found.",
       });
     };
   
