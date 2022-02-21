@@ -1,4 +1,6 @@
+
 # Movies-Library - 1.0.0
+
 
 **Author Name**: Laith Alalamat
 
@@ -9,11 +11,13 @@
 
 ## Overview
 
+
 A simple project to create a movie library.
 
 ## Getting Started
 Steps for building a server
 2/20/2022 Sunday
+
 1- Create server.js file
 
 2- npm init -y
@@ -27,6 +31,7 @@ Steps for building a server
 6- app.listen(PORT, ()=>{ console.log("Anything") })
 
 7- I can create end points (ex: app.get("/", helloWorldHandler))
+
 
 8- I will create the function for that end point(ex: helloWorldHandler)
 
@@ -54,6 +59,7 @@ We continue building on the steps from the day before Additions
 10- We created error handler: - We create a function. - We make our server know about it by using app.use - When i want to use I will use it in the .catch function.
 
 11- We created new end point that take the parameter from the URl where we found it inside req.query
+
 
 ## Project Features
 
