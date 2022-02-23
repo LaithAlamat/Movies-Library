@@ -1,4 +1,6 @@
-# Movies-Library 1.0.0
+
+# Movies-Library - 1.0.0
+
 
 **Author Name**: Laith Alalamat
 
@@ -9,10 +11,13 @@
 
 ## Overview
 
-A simple movie library project
+
+A simple project to create a movie library.
 
 ## Getting Started
-Steps for building a server 2/20/2022 Sunday 
+Steps for building a server
+2/20/2022 Sunday
+
 1- Create server.js file
 
 2- npm init -y
@@ -27,9 +32,13 @@ Steps for building a server 2/20/2022 Sunday
 
 7- I can create end points (ex: app.get("/", helloWorldHandler))
 
+
 8- I will create the function for that end point(ex: helloWorldHandler)
 
+
 2/21/2022 We continue building on the steps from the day before Additions
+
+
 
 1- Instead of reading from the json file we send a request to a third party API
 
@@ -53,6 +62,7 @@ Steps for building a server 2/20/2022 Sunday
 
 11- We created new end point that take the parameter from the URl where we found it inside req.query
 
+
 2/22/2022
 1- Install PostgreSQL
 
@@ -73,6 +83,7 @@ Steps for building a server 2/20/2022 Sunday
 9- build the function that insert in database
 
 10- build a function that get from the database
+
 
 ## Wednesday 2/23/2022
 1- We built an end point to get a specific record from the database:
@@ -101,13 +112,16 @@ Steps for building a server 2/20/2022 Sunday
     5. We return a response with status of 204 and an empty object.
 
 
+
 ## Project Features
 
 1- Get the data from third-party source.
 
+
 2- has some security with env file 
 
 3- connected to a local database.
+
 
 4- search by ID
 
