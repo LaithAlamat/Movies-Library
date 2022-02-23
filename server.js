@@ -141,16 +141,39 @@ function addMovieHandler (req, res) {
 
 app.post("/addMovie", addMovieHandler);
 
-const getMoviesHandler = (req, res) => {
-  let sql = "SELECT * FROM movies";
+function getMoviesHandler(req, res) {
+  let id = req.params.id;
+  let sql = `SELECT * FROM movies WHERE id=$1;`;
   client.query(sql).then((data) => {
     res.status(200).json(data.rows);
   });
+}
 
-};
+app.get("/getMovies/:id", getMoviesHandler);
 
-app.get("/getMovies", getMoviesHandler);
+function updateMovieCommentHandler(req, res) {
+  const id = req.params.id;
+  const movie = req.body;
 
+  const sql = `UPDATE movies SET comment=$1 WHERE id=$2 RETURNING *;`;
+  const values = [movie.comment];
+
+  client.query(sql, values).then((data) => {
+    return res.status(200).json(data.rows);
+  });
+}
+  app.put("/updateMovieComment/:id", updateMovieCommentHandler);
+
+  function deleteMovieHandler(req, res) {
+    const  id  = req.params.id;
+    console.log(id);
+    const sql = `DELETE FROM movies WHERE id=$1;`;
+  
+    client.query(sql).then(() => {
+      return res.status(204).json([]);
+    });
+  }
+  app.delete("/deleteMovie/:id", deleteMovieHandler);
 
 let pageNotFoundHandler = (req, res) => {
   res.send({
