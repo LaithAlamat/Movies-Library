@@ -85,6 +85,34 @@ Steps for building a server
 10- build a function that get from the database
 
 
+## Wednesday 2/23/2022
+1- We built an end point to get a specific record from the database:
+
+    1. We created an endpoint with a variable name (id)(/path/:id)
+    2. We created the Handler
+    3. We got the id from req.params.id
+    4. We add the SELECT statement from the database based on the id.
+    5. We returned the result.rows
+
+2- We built an end point to update a specific record in the database:
+
+    1. We created an endpoint with a variable name (id)(/path/:id)
+    2. We created our Handler
+    3. We got the id from req.params.id
+    4. We got the new data from req.body
+    5. We did the UPDATE statement for the database and we retune the updated 
+    6. We returned to the client the updated data with status 200
+
+3- We built an end point to delete a specific record from database based on the id:
+
+    1. We created an endpoint with a variable name (id)(/path/:id)
+    2. We created our Handler
+    3. We got the id from req.params.id
+    4. We did the DELETE statement fro the database
+    5. We return a response with status of 204 and an empty object.
+
+
+
 ## Project Features
 
 1- Get the data from third-party source.
@@ -94,3 +122,9 @@ Steps for building a server
 
 3- connected to a local database.
 
+
+4- search by ID
+
+5- update a specific record in the data base
+
+6- delete a specific record in the data base
