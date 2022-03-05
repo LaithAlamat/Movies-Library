@@ -1,5 +1,6 @@
 "use strict";
 
+const cors = require("cors");
 const express = require("express");
 const moviesData = require("./Data/data.json");
 const app = express();
@@ -14,6 +15,9 @@ const client = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }
 });
+
+app.use(cors());
+
 app.use(express.json());
 
 const APIKEY = process.env.APIKEY;
